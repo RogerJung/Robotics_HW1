@@ -47,7 +47,7 @@ def main():
         rot_mat[i][2][2] = nz[i] * nz[i] * (1 - sympy.cos(theta[i])) + sympy.cos(theta[i])
         
     mul = np.matmul(rot_mat[1], rot_mat[0])
-    result = np.matmul(mul, rot_mat[2])
+    result = np.matmul(rot_mat[2], mul)
     
     # print(np.array(rot_mat[0]))
     # print("--------------")
